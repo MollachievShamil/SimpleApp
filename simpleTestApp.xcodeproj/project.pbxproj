@@ -19,7 +19,6 @@
 		AC9CA1B2C62F9BB0F1BAF5C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E566CF237B70D33246DE3B52 /* LaunchScreen.storyboard */; };
 		B3DBB3B22A6FEFA80029F669 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DBB3B12A6FEFA80029F669 /* LaunchScreenViewController.swift */; };
 		B3DBB3B52A6FF0090029F669 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DBB3B42A6FF0090029F669 /* UIViewExtension.swift */; };
-		B3DBB3B72A6FF1C90029F669 /* LaunchScreenSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DBB3B62A6FF1C90029F669 /* LaunchScreenSlider.swift */; };
 		B3DBB3B92A6FF2710029F669 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DBB3B82A6FF2710029F669 /* UIColorExtension.swift */; };
 		B3DBB3BE2A6FFB1B0029F669 /* carAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = B3DBB3BD2A6FFB1A0029F669 /* carAnimation.json */; };
 /* End PBXBuildFile section */
@@ -33,7 +32,6 @@
 		A3B2A18254CC07E39115314C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3DBB3B12A6FEFA80029F669 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		B3DBB3B42A6FF0090029F669 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		B3DBB3B62A6FF1C90029F669 /* LaunchScreenSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenSlider.swift; sourceTree = "<group>"; };
 		B3DBB3B82A6FF2710029F669 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B3DBB3BD2A6FFB1A0029F669 /* carAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = carAnimation.json; sourceTree = "<group>"; };
 		C3D1D3B4C06B4B6627EAF9D9 /* simpleTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				B3DBB3B12A6FEFA80029F669 /* LaunchScreenViewController.swift */,
-				B3DBB3B62A6FF1C90029F669 /* LaunchScreenSlider.swift */,
 			);
 			path = LaunchScreen;
 			sourceTree = "<group>";
@@ -336,7 +333,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3DBB3B52A6FF0090029F669 /* UIViewExtension.swift in Sources */,
-				B3DBB3B72A6FF1C90029F669 /* LaunchScreenSlider.swift in Sources */,
 				54E0DAC1D3C20EAA622A7333 /* AppDelegate.swift in Sources */,
 				B3DBB3B92A6FF2710029F669 /* UIColorExtension.swift in Sources */,
 				0E523086BFAA620F23FC32D9 /* R.generated.swift in Sources */,
