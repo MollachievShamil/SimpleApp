@@ -6,6 +6,15 @@
   
 */
 
-"TabBatItems.Collection"       = "Collection";
-"TabBatItems.Favorite"         = "Favorite";
+"TabBatItems.Collection"             = "Collection";
+"TabBatItems.Favorite"               = "Favorite";
 
+"Settings"                           = "Settings";
+"Settings.Restore"                   = "Restore";
+"Settings.RateUs"                    = "Rate Us";
+"Settings.Privacy"                   = "Privacy";
+"Settings.Terms"                     = "TermsOfUse";
+"Settings.Contact"                   = "ContactUs";
+"Settings.Error"                     = "Error";
+"Settings.NoSubscription"            = "No subscription";
+"Settings.NoSubscriptionDescription" = "No active subscriptions found";

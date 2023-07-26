@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,9 @@
 		AB1C1DB53A3DFF484AB79A25 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412906E0CDD283F9BEC6ADCE /* TabBarViewController.swift */; };
 		AF16C50DAAA579F3232D870A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273ED194E00C0F3C425CB80E /* SceneDelegate.swift */; };
 		B20EE362462512D474EA10CB /* carAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DCC15C064AF816E7197BDF0 /* carAnimation.json */; };
+		B370970A2A7119EE009911A5 /* SettingsDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37097092A7119EE009911A5 /* SettingsDefaultCell.swift */; };
+		B370970C2A711A89009911A5 /* UICollectionviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370970B2A711A89009911A5 /* UICollectionviewExtension.swift */; };
+		B370970E2A711B44009911A5 /* UIVIewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370970D2A711B44009911A5 /* UIVIewControllerExtension.swift */; };
 		BDB19884AD460E51EAC2059E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F122B592E389E0C16AAA64E2 /* AppCoordinator.swift */; };
 		CFDCC87A2EC2D037A35A9F4D /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080784E00802E1A93508CF2B /* FavoriteViewController.swift */; };
 		E011738920955E268F7D7040 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5883E401ED0ED8DA8F9A89 /* CollectionViewController.swift */; };
@@ -76,6 +79,9 @@
 		A18AEA1A678B479121CEB667 /* Pods_simpleTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_simpleTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73BE2E504B92D125EE62E2E /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
 		ABFB20D9F7561E1D124DC65C /* TabBarModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModuleBuilder.swift; sourceTree = "<group>"; };
+		B37097092A7119EE009911A5 /* SettingsDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDefaultCell.swift; sourceTree = "<group>"; };
+		B370970B2A711A89009911A5 /* UICollectionviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionviewExtension.swift; sourceTree = "<group>"; };
+		B370970D2A711B44009911A5 /* UIVIewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewControllerExtension.swift; sourceTree = "<group>"; };
 		B5A9DD9A641850BB1856F98A /* Pods-simpleTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleTestApp.debug.xcconfig"; path = "Target Support Files/Pods-simpleTestApp/Pods-simpleTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C3D1D3B4C06B4B6627EAF9D9 /* simpleTestApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = simpleTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5883E401ED0ED8DA8F9A89 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 				CC7AF65A169C894F33400B79 /* SettingsPresenter.swift */,
 				E53A204498D110A0926F2185 /* SettingsRouter.swift */,
 				7D0F6DD11E06DC686F142764 /* SettingsViewController.swift */,
+				B37097092A7119EE009911A5 /* SettingsDefaultCell.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -241,9 +248,11 @@
 			isa = PBXGroup;
 			children = (
 				004786EC316F76E928C98364 /* ArrayExtension.swift */,
+				B370970D2A711B44009911A5 /* UIVIewControllerExtension.swift */,
 				125CC9D126F5FA3329050C5C /* UIColorExtension.swift */,
 				8EFC40778628A3A5A6B73681 /* UIDeviceExtension.swift */,
 				042CB0BCAE9E806AEA56207A /* UIViewExtension.swift */,
+				B370970B2A711A89009911A5 /* UICollectionviewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,7 +271,6 @@
 				E3BE39CAAB357E1F79368697 /* Pods-simpleTestApp.app-store.xcconfig */,
 				B5A9DD9A641850BB1856F98A /* Pods-simpleTestApp.debug.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -333,8 +341,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 0346B9180481192E1DDC0CAF /* Build configuration list for PBXProject "simpleTestApp" */;
 			compatibilityVersion = "Xcode 11.0";
@@ -346,10 +352,10 @@
 			);
 			mainGroup = A828D48C1371099813C9EF3C;
 			packageReferences = (
-				6D6610288FD776F4E212AE94 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
-				E6AA0CCF8E17877E040A9607 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
-				EEF5AE331FE8E9C883F2D4CC /* XCRemoteSwiftPackageReference "lottie-ios.git" */,
-				17A84B4B53DA9017D6376876 /* XCRemoteSwiftPackageReference "SnapKit.git" */,
+				6D6610288FD776F4E212AE94 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				E6AA0CCF8E17877E040A9607 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				EEF5AE331FE8E9C883F2D4CC /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				17A84B4B53DA9017D6376876 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 361873229F99A75FCCDD2A76 /* Products */;
 			projectDirPath = "";
@@ -446,7 +452,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/$TARGET_NAME/Sources/Generated/R.generated.swift",
+				$SRCROOT/$TARGET_NAME/Sources/Generated/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -469,6 +475,7 @@
 				E011738920955E268F7D7040 /* CollectionViewController.swift in Sources */,
 				EB7FCAC8FC4251085112B12F /* FavoriteInteractor.swift in Sources */,
 				815C98AF4DD3C75553D0A6A5 /* FavoriteModuleBuilder.swift in Sources */,
+				B370970E2A711B44009911A5 /* UIVIewControllerExtension.swift in Sources */,
 				5D1A464D7284362AD12AF8EF /* FavoritePresenter.swift in Sources */,
 				6049E727EE66AC99F025D7B6 /* FavoriteRouter.swift in Sources */,
 				CFDCC87A2EC2D037A35A9F4D /* FavoriteViewController.swift in Sources */,
@@ -487,8 +494,10 @@
 				AB1C1DB53A3DFF484AB79A25 /* TabBarViewController.swift in Sources */,
 				138CB904158F5AFE5DB7F035 /* TransparentHeader.swift in Sources */,
 				93A9834CBE40BBD7D849B661 /* UIColorExtension.swift in Sources */,
+				B370970C2A711A89009911A5 /* UICollectionviewExtension.swift in Sources */,
 				2B9010B4372B8AC597E023D9 /* UIDeviceExtension.swift in Sources */,
 				54D0498E51ECCB2AFDDDE57D /* UIViewExtension.swift in Sources */,
+				B370970A2A7119EE009911A5 /* SettingsDefaultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,7 +706,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		17A84B4B53DA9017D6376876 /* XCRemoteSwiftPackageReference "SnapKit.git" */ = {
+		17A84B4B53DA9017D6376876 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -705,7 +714,7 @@
 				minimumVersion = 5.0.1;
 			};
 		};
-		6D6610288FD776F4E212AE94 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		6D6610288FD776F4E212AE94 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -713,7 +722,7 @@
 				minimumVersion = 5.6.1;
 			};
 		};
-		E6AA0CCF8E17877E040A9607 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
+		E6AA0CCF8E17877E040A9607 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -721,7 +730,7 @@
 				minimumVersion = 7.0.0;
 			};
 		};
-		EEF5AE331FE8E9C883F2D4CC /* XCRemoteSwiftPackageReference "lottie-ios.git" */ = {
+		EEF5AE331FE8E9C883F2D4CC /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -734,22 +743,22 @@
 /* Begin XCSwiftPackageProductDependency section */
 		31E5B4719019F2691BBF1DBF /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 17A84B4B53DA9017D6376876 /* XCRemoteSwiftPackageReference "SnapKit.git" */;
+			package = 17A84B4B53DA9017D6376876 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 		52DBCE389501224A95ACAA74 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E6AA0CCF8E17877E040A9607 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
+			package = E6AA0CCF8E17877E040A9607 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 		B7F77C0EB0427335B6159B89 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6D6610288FD776F4E212AE94 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = 6D6610288FD776F4E212AE94 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		C4CBD303790D5801E80816BA /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EEF5AE331FE8E9C883F2D4CC /* XCRemoteSwiftPackageReference "lottie-ios.git" */;
+			package = EEF5AE331FE8E9C883F2D4CC /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
