@@ -9,30 +9,51 @@ import Foundation
 import Kingfisher
 import UIKit
 
+struct TopCellModel: Hashable, Equatable {
+    var mainImage: String?
+    var userImage: String
+    var carName: String
+    var userName: String
+}
+
 final class DetailsTopCell: UICollectionViewCell {
     
-    static let identifier = String(describing: MainCollectionViewCell.self)
+    static let identifier = String(describing: DetailsTopCell.self)
     private var shadowLayer = CAShapeLayer()
     
-    private let imageView: UIImageView = {
+    private let carImageView: UIImageView = {
         let view = UIImageView()
-        view.tintColor = .black
+        view.layer.cornerRadius = 12
+        view.layer.cornerCurve = .continuous
+        view.layer.masksToBounds = true
+        view.contentMode = .scaleAspectFill
         return view
     }()
   
-    private let titleLabel: UILabel = {
+    private let carLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
         label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 10)
         return label
     }()
     
-    private let rightIcon: UIImageView = {
+    private let userAvatar: UIImageView = {
         let view = UIImageView()
         view.image = R.image.settingsArrowRight()
+        view.layer.cornerRadius = 15
+        view.layer.cornerCurve = .continuous
+        view.layer.masksToBounds = true
         return view
+    }()
+    
+    private let userNameLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 10)
+        return label
     }()
     
     // MARK: - Init
@@ -51,17 +72,28 @@ final class DetailsTopCell: UICollectionViewCell {
     }
     
     // MARK: - Public methods
-    func setup(model: MainCollectionCellModel) {
-        titleLabel.text = model.title
-        
-        imageView.kf.setImage(
-            with: URL(string: model.image),
+    func setup(model: TopCellModel) {
+        carLabel.text = model.carName
+        userNameLabel.text = model.userName
+        userAvatar.kf.setImage(
+            with: URL(string: model.userImage),
             placeholder: nil,
             options: [
-                .processor(DownsamplingImageProcessor(size: CGSize(width: 200, height: 140))),
+                .processor(DownsamplingImageProcessor(size: CGSize(width: 30, height: 30))),
                 .scaleFactor(UIScreen.main.scale),
                 .cacheOriginalImage
             ])
+        
+        guard let carImageURL = model.mainImage else { return }
+        carImageView.kf.setImage(
+            with: URL(string: carImageURL),
+            placeholder: nil,
+            options: [
+                .processor(DownsamplingImageProcessor(size: CGSize(width: 150, height: 150))),
+                .scaleFactor(UIScreen.main.scale),
+                .cacheOriginalImage
+            ])
+        
     }
     
     // MARK: - Configure UI
@@ -76,7 +108,7 @@ final class DetailsTopCell: UICollectionViewCell {
     }
 
     private func addSubViews() {
-        contentView.addSubviews(imageView, titleLabel, rightIcon)
+        contentView.addSubviews(carImageView, carLabel, userAvatar, userNameLabel)
     }
     
     // MARK: - SHADOWS
@@ -98,19 +130,28 @@ final class DetailsTopCell: UICollectionViewCell {
 extension DetailsTopCell {
     
     private func setupConstraints() {
-        imageView.snp.makeConstraints { make in
-            make.left.right.top.equalToSuperview()
-            make.bottom.equalToSuperview().inset(35)
+        carImageView.snp.makeConstraints { make in
+            make.left.top.equalToSuperview()
+            make.height.equalTo(150)
+            make.width.lessThanOrEqualTo(150)
         }
         
-        titleLabel.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(8)
-            make.left.equalToSuperview().inset(16)
+        carLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(16)
+            make.left.equalTo(carImageView.snp.right).inset(-16)
+            make.right.equalToSuperview().inset(16)
         }
         
-        rightIcon.snp.makeConstraints { make in
-            make.right.equalToSuperview().inset(18)
-            make.centerY.equalToSuperview()
+        userAvatar.snp.makeConstraints { make in
+            make.top.equalTo(carLabel.snp.bottom).inset(-16)
+            make.left.equalTo(carImageView.snp.right).inset(-16)
+            make.width.height.equalTo(30)
+        }
+        
+        userNameLabel.snp.makeConstraints { make in
+            make.centerY.equalTo(userAvatar.snp.centerY)
+            make.left.equalTo(userAvatar.snp.right).inset(-8)
+            make.right.equalToSuperview().inset(16)
         }
     }
 }

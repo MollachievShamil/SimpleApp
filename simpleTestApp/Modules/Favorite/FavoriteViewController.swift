@@ -14,8 +14,18 @@ protocol FavoriteViewControllerInterface: AnyObject {
 
 final class FavoriteViewController: UIViewController {
     var presenter: FavoritePresenterInterface?
+    
+    private lazy var headerView: TransparentHeader = {
+        let headerView = TransparentHeader(type: .none)
+        headerView.setupTitle(title: R.string.localizable.tabBatItemsFavorite())
+        return headerView
+    }()
 
     // MARK: - Lifecycle
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .darkContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -26,14 +36,17 @@ final class FavoriteViewController: UIViewController {
     private func setupView() {
         addSubviews()
         addConstraints()
+        view.backgroundColor = .backgroundColor
     }
  
     private func addSubviews() {
-        view.addSubviews()
+        view.addSubviews(headerView)
     }
     
     private func addConstraints() {
-        
+        headerView.snp.makeConstraints { make in
+            make.top.left.right.equalToSuperview()
+        }
     }
 }
 

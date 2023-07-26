@@ -35,7 +35,8 @@ final class DetailsViewController: UIViewController {
         collectionView.showsVerticalScrollIndicator = false
         collectionView.delegate = self
         collectionView.backgroundColor = .backgroundColor
-        collectionView.register(classCell: MainCollectionViewCell.self)
+        collectionView.register(classCell: DetailsTopCell.self)
+        collectionView.register(classCell: DetailsBottomCell.self)
         return collectionView
     }()
 
@@ -90,10 +91,12 @@ final class DetailsViewController: UIViewController {
             
             switch model {
             case .top(carInfo: let info):
-                let cell = self?.collectionView.reusableCell(classCell: MainCollectionViewCell.self, indexPath: indexPath)
+                let cell = self?.collectionView.reusableCell(classCell: DetailsTopCell.self, indexPath: indexPath)
+                cell?.setup(model: info)
                 return cell
             case .bottom(post: let post):
-                let cell = self?.collectionView.reusableCell(classCell: MainCollectionViewCell.self, indexPath: indexPath)
+                let cell = self?.collectionView.reusableCell(classCell: DetailsBottomCell.self, indexPath: indexPath)
+                cell?.setup(model: post)
                 return cell
             }
         })
@@ -124,13 +127,12 @@ extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var height: CGFloat = 0
         guard let model = presenter?.getSectionModel() else { return CGSize(width: 100, height: 100) }
         switch model[indexPath.section] {
         case .top:
-            return CGSize(width: view.frame.width - 40, height: 200)
+            return CGSize(width: view.frame.width - 40, height: 150)
         case .bottom:
-            return CGSize(width: (view.frame.width - 60) / 2, height: (view.frame.width - 60) / 2)
+            return CGSize(width: (view.frame.width - 60) / 2, height: 250)
         }
 
     }
