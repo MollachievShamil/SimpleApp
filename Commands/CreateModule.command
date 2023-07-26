@@ -8,7 +8,7 @@ read moduleName
 echo "Enter class prefix"
 read classPrefix
 eval "./Generator.swift ${moduleName} ${classPrefix}"
-eval "mv ${moduleName} ../logoMaker/Modules"
+eval "mv ${moduleName} ../simpleTestApp/Modules"
 cd ..
 cd Commands
 eval "./Setup.command"

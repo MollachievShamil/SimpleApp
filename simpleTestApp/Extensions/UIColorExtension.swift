@@ -9,7 +9,8 @@ import UIKit
 
 extension UIColor {
     
-    // MARK: - OFTEN USED COLORS
+    // MARK: - OFTEN USED COLOR
+    static let backgroundColor = hexColor(hex: "EFEFEF")
 
     // MARK: - HEX INIT
     convenience init(hex: String, alpha: CGFloat? = nil) {

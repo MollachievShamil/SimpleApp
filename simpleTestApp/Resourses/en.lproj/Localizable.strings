@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  simpleTestApp
+
+  Created by Шамиль Моллачиев on 26.07.2023.
+  
+*/
+
+"TabBatItems.Collection"       = "Collection";
+"TabBatItems.Favorite"         = "Favorite";
+
