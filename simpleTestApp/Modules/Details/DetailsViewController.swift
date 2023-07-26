@@ -1,5 +1,5 @@
 //
-//  CollectionViewController.swift
+//  DetailsViewController.swift
 //  CIViperGenerator
 //
 //  Created by MollachievShamil on 26.07.2023.
@@ -8,19 +8,15 @@
 
 import UIKit
 
-protocol CollectionViewControllerInterface: AnyObject {
+protocol DetailsViewControllerInterface: AnyObject {
     func reloadCollection()
 }
 
-final class CollectionViewController: UIViewController {
-    var presenter: CollectionPresenterInterface?
-    
-    private enum Section {
-        case main
-    }
+final class DetailsViewController: UIViewController {
+    var presenter: DetailsPresenterInterface?
     
     private lazy var headerView: TransparentHeader = {
-        let headerView = TransparentHeader(type: .menu)
+        let headerView = TransparentHeader(type: .crossButton)
         headerView.leftButtonTappedCallback = { [weak self] in
             self?.presenter?.headerLeftButtonPressed()
         }
@@ -28,7 +24,7 @@ final class CollectionViewController: UIViewController {
         return headerView
     }()
     
-    private var collectionViewDataSource: UICollectionViewDiffableDataSource<Section, MainCollectionCellModel>?
+    private var collectionViewDataSource: UICollectionViewDiffableDataSource<DetailsSectionType, DetailsCellModel>?
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -39,11 +35,13 @@ final class CollectionViewController: UIViewController {
         collectionView.showsVerticalScrollIndicator = false
         collectionView.delegate = self
         collectionView.backgroundColor = .backgroundColor
-        collectionView.register(classCell: MainCollectionViewCell.self)
+        collectionView.register(classCell: DetailsTopCell.self)
+        collectionView.register(classCell: DetailsBottomCell.self)
         return collectionView
     }()
-    
+
     // MARK: - Lifecycle
+   
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .darkContent
     }
@@ -51,13 +49,17 @@ final class CollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        presenter?.viewDidLoad()
         createCollectionViewDataSource()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         headerView.reinitBlurView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        headerView.releaseBlurAnimation()
     }
     
     // MARK: - AddSubview And Constraints
@@ -67,7 +69,7 @@ final class CollectionViewController: UIViewController {
         addConstraints()
         view.backgroundColor = .backgroundColor
     }
-    
+ 
     private func addSubviews() {
         view.addSubviews(collectionView, headerView)
     }
@@ -81,31 +83,58 @@ final class CollectionViewController: UIViewController {
             make.edges.equalToSuperview()
         }
     }
-    // MARK: - CreateDataSource
+    
+    // MARK: - SetupCollecctionData
     private func createCollectionViewDataSource() {
         collectionViewDataSource = UICollectionViewDiffableDataSource(collectionView: collectionView,
                                                                       cellProvider: { [weak self] _, indexPath, model in
-            let cell = self?.collectionView.reusableCell(classCell: MainCollectionViewCell.self, indexPath: indexPath)
-            cell?.setup(model: model)
-            return cell
+            
+            switch model {
+            case .top(carInfo: let info):
+                let cell = self?.collectionView.reusableCell(classCell: DetailsTopCell.self, indexPath: indexPath)
+                cell?.setup(model: info)
+                return cell
+            case .bottom(post: let post):
+                let cell = self?.collectionView.reusableCell(classCell: DetailsBottomCell.self, indexPath: indexPath)
+                cell?.setup(model: post)
+                return cell
+            }
         })
     }
     
     private func reloadData() {
         guard let presenter = presenter else { return }
-        var snapshot = NSDiffableDataSourceSnapshot<Section, MainCollectionCellModel>()
-        snapshot.appendSections([.main])
-        snapshot.appendItems(presenter.getSectionModel(), toSection: .main)
-        collectionViewDataSource?.apply(snapshot, animatingDifferences: false)
+        var snapshot = NSDiffableDataSourceSnapshot<DetailsSectionType, DetailsCellModel>()
+        let sections = presenter.getSectionModel()
+
+        snapshot.appendSections(sections)
+        for section in sections {
+            switch section {
+            case .top:
+                guard let topCellModel = presenter.getTopCells() else { return }
+                snapshot.appendItems([topCellModel], toSection: section)
+            case .bottom:
+                guard let bottomCellModel = presenter.getBottomCells() else { return }
+                snapshot.appendItems(bottomCellModel, toSection: section)
+            }
+        }
+        collectionViewDataSource?.apply(snapshot, animatingDifferences: true)
     }
 }
 
-extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width - 40, height: view.frame.width - 40)
+        guard let model = presenter?.getSectionModel() else { return CGSize(width: 100, height: 100) }
+        switch model[indexPath.section] {
+        case .top:
+            return CGSize(width: view.frame.width - 40, height: 150)
+        case .bottom:
+            return CGSize(width: (view.frame.width - 60) / 2, height: 250)
+        }
+
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -117,11 +146,11 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        UIEdgeInsets(top: 24, left: 20, bottom: 0, right: 20)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.cellSelected(index: indexPath.row)
+
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -129,9 +158,10 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDe
         guard position > (collectionView.contentSize.height - scrollView.frame.size.height - 100) else { return }
         presenter?.infinityScrollAction()
     }
+    
 }
 
-extension CollectionViewController: CollectionViewControllerInterface {
+extension DetailsViewController: DetailsViewControllerInterface {
     func reloadCollection() {
         reloadData()
     }

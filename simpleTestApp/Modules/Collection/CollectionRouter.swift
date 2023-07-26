@@ -11,6 +11,7 @@ import UIKit
 
 protocol CollectionRouterInterface: AnyObject {
     func settingsTapped()
+    func presentDetailsController(id: Int)
 }
 
 final class CollectionRouter: NSObject {
@@ -22,6 +23,12 @@ final class CollectionRouter: NSObject {
 extension CollectionRouter: CollectionRouterInterface {
     func settingsTapped() {
         let controller = SettingsModuleBuilder.build()
+        controller.modalPresentationStyle = .fullScreen
+        viewController?.present(controller, animated: true)
+    }
+    
+    func presentDetailsController(id: Int) {
+        let controller = DetailsModuleBuilder.build(carId: id)
         controller.modalPresentationStyle = .fullScreen
         viewController?.present(controller, animated: true)
     }

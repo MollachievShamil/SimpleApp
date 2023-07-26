@@ -15,6 +15,7 @@ final class TransparentHeader: UIView {
     enum LeftButtonType {
         case menu
         case crossButton
+        case none
         
         func getImage() -> UIImage? {
             switch self {
@@ -22,6 +23,8 @@ final class TransparentHeader: UIView {
                 return R.image.menu()?.withTintColor(.black)
             case .crossButton:
                 return R.image.cross()?.withTintColor(.black)
+            case .none:
+                return nil
             }
         }
     }
