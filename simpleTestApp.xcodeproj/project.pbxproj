@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D177124660E2BF5FBB8BD39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526F6171A09A9BC94C4E0D8 /* ViewController.swift */; };
 		0E523086BFAA620F23FC32D9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD13FBEC61048671970C14AD /* R.generated.swift */; };
 		1FA10D8DCF2FE674ECC576C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C44333EFBC1CDB89C478FF /* Assets.xcassets */; };
 		3B556502571BD1E23B08C410 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 52DBCE389501224A95ACAA74 /* Kingfisher */; };
@@ -18,19 +17,26 @@
 		81F179634A7C26EDDAAE7719 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C4CBD303790D5801E80816BA /* Lottie */; };
 		9D3B430053E562B7BF56AA2F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B7F77C0EB0427335B6159B89 /* Alamofire */; };
 		AC9CA1B2C62F9BB0F1BAF5C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E566CF237B70D33246DE3B52 /* LaunchScreen.storyboard */; };
+		B3DBB3B22A6FEFA80029F669 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DBB3B12A6FEFA80029F669 /* LaunchScreenViewController.swift */; };
+		B3DBB3B52A6FF0090029F669 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DBB3B42A6FF0090029F669 /* UIViewExtension.swift */; };
+		B3DBB3B92A6FF2710029F669 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DBB3B82A6FF2710029F669 /* UIColorExtension.swift */; };
+		B3DBB3BE2A6FFB1B0029F669 /* carAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = B3DBB3BD2A6FFB1A0029F669 /* carAnimation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0526F6171A09A9BC94C4E0D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5351C2CF5B37BCF3EBD3A290 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		61469C3229C44386802FA2B5 /* Pods-simpleTestApp.app-store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleTestApp.app-store.xcconfig"; path = "Target Support Files/Pods-simpleTestApp/Pods-simpleTestApp.app-store.xcconfig"; sourceTree = "<group>"; };
 		6B82A96D1C2B0B8C09A04591 /* Pods-simpleTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleTestApp.debug.xcconfig"; path = "Target Support Files/Pods-simpleTestApp/Pods-simpleTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		743420C2DA2ABF91E6068C61 /* Pods_simpleTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_simpleTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8986959042A28A4ADC15D0FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3B2A18254CC07E39115314C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C3D1D3B4C06B4B6627EAF9D9 /* simpleTestApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = simpleTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3DBB3B12A6FEFA80029F669 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		B3DBB3B42A6FF0090029F669 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		B3DBB3B82A6FF2710029F669 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		B3DBB3BD2A6FFB1A0029F669 /* carAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = carAnimation.json; sourceTree = "<group>"; };
+		C3D1D3B4C06B4B6627EAF9D9 /* simpleTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C44333EFBC1CDB89C478FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F7F958EDC22A2BF784E28439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F7F958EDC22A2BF784E28439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD13FBEC61048671970C14AD /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +86,6 @@
 				61469C3229C44386802FA2B5 /* Pods-simpleTestApp.app-store.xcconfig */,
 				6B82A96D1C2B0B8C09A04591 /* Pods-simpleTestApp.debug.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				604606FFA8125431AC388DBD /* Generated */,
+				E566CF237B70D33246DE3B52 /* LaunchScreen.storyboard */,
+				F7F958EDC22A2BF784E28439 /* Info.plist */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -105,15 +112,64 @@
 		AF511D51C4CD5F7BA85B2CBD /* simpleTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				B3DBB3B32A6FEFF40029F669 /* Extensions */,
+				B3DBB3AD2A6FECB10029F669 /* Application */,
+				B3DBB3AF2A6FEF830029F669 /* Modules */,
 				90C1F7DB005A8735CDF878E9 /* Sources */,
-				8986959042A28A4ADC15D0FA /* AppDelegate.swift */,
-				F1C44333EFBC1CDB89C478FF /* Assets.xcassets */,
-				F7F958EDC22A2BF784E28439 /* Info.plist */,
-				E566CF237B70D33246DE3B52 /* LaunchScreen.storyboard */,
-				5351C2CF5B37BCF3EBD3A290 /* SceneDelegate.swift */,
-				0526F6171A09A9BC94C4E0D8 /* ViewController.swift */,
+				B3DBB3AE2A6FECE30029F669 /* Resourses */,
 			);
 			path = simpleTestApp;
+			sourceTree = "<group>";
+		};
+		B3DBB3AD2A6FECB10029F669 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8986959042A28A4ADC15D0FA /* AppDelegate.swift */,
+				5351C2CF5B37BCF3EBD3A290 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B3DBB3AE2A6FECE30029F669 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				B3DBB3BA2A6FF8CB0029F669 /* LottieAnimations */,
+				F1C44333EFBC1CDB89C478FF /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		B3DBB3AF2A6FEF830029F669 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B3DBB3B02A6FEF8E0029F669 /* LaunchScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B3DBB3B02A6FEF8E0029F669 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B3DBB3B12A6FEFA80029F669 /* LaunchScreenViewController.swift */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		B3DBB3B32A6FEFF40029F669 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B3DBB3B42A6FF0090029F669 /* UIViewExtension.swift */,
+				B3DBB3B82A6FF2710029F669 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B3DBB3BA2A6FF8CB0029F669 /* LottieAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				B3DBB3BD2A6FFB1A0029F669 /* carAnimation.json */,
+			);
+			path = LottieAnimations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +209,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 0346B9180481192E1DDC0CAF /* Build configuration list for PBXProject "simpleTestApp" */;
 			compatibilityVersion = "Xcode 11.0";
@@ -166,10 +220,10 @@
 			);
 			mainGroup = A828D48C1371099813C9EF3C;
 			packageReferences = (
-				6D6610288FD776F4E212AE94 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
-				E6AA0CCF8E17877E040A9607 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
-				EEF5AE331FE8E9C883F2D4CC /* XCRemoteSwiftPackageReference "lottie-ios.git" */,
-				17A84B4B53DA9017D6376876 /* XCRemoteSwiftPackageReference "SnapKit.git" */,
+				6D6610288FD776F4E212AE94 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				E6AA0CCF8E17877E040A9607 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				EEF5AE331FE8E9C883F2D4CC /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				17A84B4B53DA9017D6376876 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 361873229F99A75FCCDD2A76 /* Products */;
 			projectDirPath = "";
@@ -185,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DBB3BE2A6FFB1B0029F669 /* carAnimation.json in Resources */,
 				1FA10D8DCF2FE674ECC576C9 /* Assets.xcassets in Resources */,
 				AC9CA1B2C62F9BB0F1BAF5C4 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -242,7 +297,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/$TARGET_NAME/Sources/Generated/R.generated.swift",
+				$SRCROOT/$TARGET_NAME/Sources/Generated/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -277,10 +332,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DBB3B52A6FF0090029F669 /* UIViewExtension.swift in Sources */,
 				54E0DAC1D3C20EAA622A7333 /* AppDelegate.swift in Sources */,
+				B3DBB3B92A6FF2710029F669 /* UIColorExtension.swift in Sources */,
 				0E523086BFAA620F23FC32D9 /* R.generated.swift in Sources */,
 				57745982013CE78BB9BD7BCF /* SceneDelegate.swift in Sources */,
-				0D177124660E2BF5FBB8BD39 /* ViewController.swift in Sources */,
+				B3DBB3B22A6FEFA80029F669 /* LaunchScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +363,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "DWARF with dSYM File";
-				INFOPLIST_FILE = simpleTestApp/Info.plist;
+				INFOPLIST_FILE = simpleTestApp/Sources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -327,7 +384,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "DWARF with dSYM File";
-				INFOPLIST_FILE = simpleTestApp/Info.plist;
+				INFOPLIST_FILE = simpleTestApp/Sources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -481,7 +538,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		17A84B4B53DA9017D6376876 /* XCRemoteSwiftPackageReference "SnapKit.git" */ = {
+		17A84B4B53DA9017D6376876 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -489,7 +546,7 @@
 				minimumVersion = 5.0.1;
 			};
 		};
-		6D6610288FD776F4E212AE94 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		6D6610288FD776F4E212AE94 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -497,7 +554,7 @@
 				minimumVersion = 5.6.1;
 			};
 		};
-		E6AA0CCF8E17877E040A9607 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
+		E6AA0CCF8E17877E040A9607 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -505,7 +562,7 @@
 				minimumVersion = 7.0.0;
 			};
 		};
-		EEF5AE331FE8E9C883F2D4CC /* XCRemoteSwiftPackageReference "lottie-ios.git" */ = {
+		EEF5AE331FE8E9C883F2D4CC /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -518,22 +575,22 @@
 /* Begin XCSwiftPackageProductDependency section */
 		31E5B4719019F2691BBF1DBF /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 17A84B4B53DA9017D6376876 /* XCRemoteSwiftPackageReference "SnapKit.git" */;
+			package = 17A84B4B53DA9017D6376876 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 		52DBCE389501224A95ACAA74 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E6AA0CCF8E17877E040A9607 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
+			package = E6AA0CCF8E17877E040A9607 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 		B7F77C0EB0427335B6159B89 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6D6610288FD776F4E212AE94 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = 6D6610288FD776F4E212AE94 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		C4CBD303790D5801E80816BA /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EEF5AE331FE8E9C883F2D4CC /* XCRemoteSwiftPackageReference "lottie-ios.git" */;
+			package = EEF5AE331FE8E9C883F2D4CC /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
