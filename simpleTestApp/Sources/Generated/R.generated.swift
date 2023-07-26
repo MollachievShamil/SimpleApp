@@ -63,9 +63,72 @@ struct _R {
     }
 
 
-    /// This `_R.string.localizable` struct is generated, and contains static references to 2 localization keys.
+    /// This `_R.string.localizable` struct is generated, and contains static references to 11 localization keys.
     struct localizable {
       let source: RswiftResources.StringResource.Source
+
+      /// en translation: Settings
+      ///
+      /// Key: Settings
+      ///
+      /// Locales: en
+      var settings: RswiftResources.StringResource { .init(key: "Settings", tableName: "Localizable", source: source, developmentValue: "Settings", comment: nil) }
+
+      /// en translation: ContactUs
+      ///
+      /// Key: Settings.Contact
+      ///
+      /// Locales: en
+      var settingsContact: RswiftResources.StringResource { .init(key: "Settings.Contact", tableName: "Localizable", source: source, developmentValue: "ContactUs", comment: nil) }
+
+      /// en translation: Error
+      ///
+      /// Key: Settings.Error
+      ///
+      /// Locales: en
+      var settingsError: RswiftResources.StringResource { .init(key: "Settings.Error", tableName: "Localizable", source: source, developmentValue: "Error", comment: nil) }
+
+      /// en translation: No subscription
+      ///
+      /// Key: Settings.NoSubscription
+      ///
+      /// Locales: en
+      var settingsNoSubscription: RswiftResources.StringResource { .init(key: "Settings.NoSubscription", tableName: "Localizable", source: source, developmentValue: "No subscription", comment: nil) }
+
+      /// en translation: No active subscriptions found
+      ///
+      /// Key: Settings.NoSubscriptionDescription
+      ///
+      /// Locales: en
+      var settingsNoSubscriptionDescription: RswiftResources.StringResource { .init(key: "Settings.NoSubscriptionDescription", tableName: "Localizable", source: source, developmentValue: "No active subscriptions found", comment: nil) }
+
+      /// en translation: Privacy
+      ///
+      /// Key: Settings.Privacy
+      ///
+      /// Locales: en
+      var settingsPrivacy: RswiftResources.StringResource { .init(key: "Settings.Privacy", tableName: "Localizable", source: source, developmentValue: "Privacy", comment: nil) }
+
+      /// en translation: Rate Us
+      ///
+      /// Key: Settings.RateUs
+      ///
+      /// Locales: en
+      var settingsRateUs: RswiftResources.StringResource { .init(key: "Settings.RateUs", tableName: "Localizable", source: source, developmentValue: "Rate Us", comment: nil) }
+
+      /// en translation: Restore
+      ///
+      /// Key: Settings.Restore
+      ///
+      /// Locales: en
+      var settingsRestore: RswiftResources.StringResource { .init(key: "Settings.Restore", tableName: "Localizable", source: source, developmentValue: "Restore", comment: nil) }
+
+      /// en translation: TermsOfUse
+      ///
+      /// Key: Settings.Terms
+      ///
+      /// Locales: en
+      var settingsTerms: RswiftResources.StringResource { .init(key: "Settings.Terms", tableName: "Localizable", source: source, developmentValue: "TermsOfUse", comment: nil) }
 
       /// en translation: Collection
       ///
@@ -91,12 +154,18 @@ struct _R {
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 1 images.
+  /// This `_R.image` struct is generated, and contains static references to 3 images.
   struct image {
     let bundle: Foundation.Bundle
 
+    /// Image `Cross`.
+    var cross: RswiftResources.ImageResource { .init(name: "Cross", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `Menu`.
     var menu: RswiftResources.ImageResource { .init(name: "Menu", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `SettingsArrowRight`.
+    var settingsArrowRight: RswiftResources.ImageResource { .init(name: "SettingsArrowRight", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
   /// This `_R.info` struct is generated, and contains static references to 1 properties.

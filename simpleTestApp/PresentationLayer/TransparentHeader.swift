@@ -12,13 +12,26 @@ final class TransparentHeader: UIView {
     
     var leftButtonTappedCallback: (() -> Void)?
     
+    enum LeftButtonType {
+        case menu
+        case crossButton
+        
+        func getImage() -> UIImage? {
+            switch self {
+            case .menu:
+                return R.image.menu()?.withTintColor(.black)
+            case .crossButton:
+                return R.image.cross()?.withTintColor(.black)
+            }
+        }
+    }
+    
     private var blackoutView = UIView()
     private var blurEffectStyle: UIBlurEffect.Style = .light
     private var blurRadiusDriver: UIViewPropertyAnimator?
   
     private lazy var leftButton: UIButton = {
         let button = UIButton()
-        button.setImage(R.image.menu()?.withTintColor(.black), for: .normal)
         button.addTarget(self, action: #selector(leftButtonAction), for: .touchUpInside)
         return button
     }()
@@ -32,12 +45,13 @@ final class TransparentHeader: UIView {
     }()
     
     let blurView = UIVisualEffectView(effect: nil)
-
+    
     // MARK: - init
-    init() {
+    init(type: LeftButtonType) {
         super.init(frame: .zero)
         setupSubviews()
         backgroundColor = .backgroundColor.withAlphaComponent(0.8)
+        leftButton.setImage(type.getImage(), for: .normal)
     }
     
     required init?(coder: NSCoder) {

@@ -16,7 +16,7 @@ final class CollectionViewController: UIViewController {
     var presenter: CollectionPresenterInterface?
     
     private lazy var headerView: TransparentHeader = {
-        let headerView = TransparentHeader()
+        let headerView = TransparentHeader(type: .menu)
         headerView.leftButtonTappedCallback = { [weak self] in
             self?.presenter?.headerLeftButtonPressed()
         }

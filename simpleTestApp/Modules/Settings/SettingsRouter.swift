@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol SettingsRouterInterface: AnyObject {
-
+    func dismiss()
 }
 
 final class SettingsRouter: NSObject {
@@ -20,5 +20,7 @@ final class SettingsRouter: NSObject {
 }
 
 extension SettingsRouter: SettingsRouterInterface {
-
+    func dismiss() {
+        viewController?.dismiss(animated: true)
+    }
 }
