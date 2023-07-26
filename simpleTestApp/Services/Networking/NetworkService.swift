@@ -12,14 +12,24 @@ protocol NetworkDataProvider {
 }
 
 typealias GetAllAutoResult = (Result<[AllAutoResponse], AFError>) -> Void
+typealias GetAutoInfoResult = (Result<AutoInfoResponse, AFError>) -> Void
+typealias GetAutoPostsResult = (Result<AutoPostsResponse, AFError>) -> Void
 
 enum RequestGenerator: Codable {
     case getAllAuto(page: String)
+    case getAutoInfo(autoId: String)
+    case getAllPosts(autoId: String, page: String)
     
     var request: URLRequest {
         switch self {
         case .getAllAuto(let page):
             return requestCreator(basicURL: getAllAutoUrl(), method: .get) { components in
+                injectPage(page: page, in: &components)
+            }
+        case .getAutoInfo(let autoId):
+            return requestCreator(basicURL: getAutoInfoURL(id: autoId), method: .get) { _ in }
+        case .getAllPosts(let autoId, let page):
+            return requestCreator(basicURL: getAutoPosts(id: autoId), method: .get) { components in
                 injectPage(page: page, in: &components)
             }
         }
@@ -46,6 +56,14 @@ enum RequestGenerator: Codable {
     
     private func getAllAutoUrl() -> String {
         return "http://am111.05.testing.place/api/v1/cars/list"
+    }
+    
+    private func getAutoInfoURL(id: String) -> String {
+        return "http://am111.05.testing.place/api/v1/car/\(id)"
+    }
+    
+    private func getAutoPosts(id: String) -> String {
+        return "http://am111.05.testing.place/api/v1/car/\(id)/posts"
     }
 
     private func injectPage(page: String, in components: inout URLComponents) {
@@ -98,5 +116,12 @@ extension NetworkEngine: NetworkDataProvider {
     func getAllAuto(page: String, completion: @escaping GetAllAutoResult) {
         performDecodableRequest(request: .getAllAuto(page: page), completion: completion)
     }
+    
+    func getAutoInfo(autoId: String, completion: @escaping GetAutoInfoResult) {
+        performDecodableRequest(request: .getAutoInfo(autoId: autoId), completion: completion)
+    }
 
+    func getAutoPosts(autoId: String, page: String, completion: @escaping GetAutoPostsResult) {
+        performDecodableRequest(request: .getAllPosts(autoId: autoId, page: page), completion: completion)
+    }
 }

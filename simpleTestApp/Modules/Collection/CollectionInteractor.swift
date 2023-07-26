@@ -12,6 +12,7 @@ protocol CollectionInteractorInterface: AnyObject {
     func viewDidLoad()
     func infinityScrollAction()
     func getSectionModel() -> [MainCollectionCellModel]
+    func getCellId(index: Int) -> Int 
 }
 
 struct MainCollectionCellModel: Hashable {
@@ -86,5 +87,9 @@ extension CollectionInteractor: CollectionInteractorInterface {
     
     func getSectionModel() -> [MainCollectionCellModel] {
         cellModelsArray
+    }
+    
+    func getCellId(index: Int) -> Int {
+        cellModelsArray[index].id
     }
 }

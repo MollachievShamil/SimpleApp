@@ -42,7 +42,7 @@ final class SettingsViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .backgroundColor
-        collectionView.contentInset.top = 20
+        collectionView.contentInset.top = 40
         collectionView.register(classCell: SettingsDefaultCell.self)
         return collectionView
     }()
@@ -97,7 +97,6 @@ final class SettingsViewController: UIViewController {
 
 extension SettingsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         dataSource.count
     }
@@ -124,14 +123,13 @@ extension SettingsViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             presenter?.cellSelected(cellType: dataSource[indexPath.row])
         }
 }
-    
 
 extension SettingsViewController: SettingsViewControllerInterface {
     func reloadCollection() {

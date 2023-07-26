@@ -121,7 +121,7 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-           // presenter?.cellSelected(cellType: dataSource[indexPath.row])
+        presenter?.cellSelected(index: indexPath.row)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

@@ -14,6 +14,7 @@ protocol CollectionPresenterInterface: AnyObject {
     func reloadCollection()
     func infinityScrollAction()
     func getSectionModel() -> [MainCollectionCellModel]
+    func cellSelected(index: Int)
 }
 
 final class CollectionPresenter {
@@ -54,4 +55,8 @@ extension CollectionPresenter: CollectionPresenterInterface {
         interactor?.getSectionModel() ?? []
     }
     
+    func cellSelected(index: Int) {
+        guard let id = interactor?.getCellId(index: index) else { return }
+        router?.presentDetailsController(id: id)
+    }
 }
