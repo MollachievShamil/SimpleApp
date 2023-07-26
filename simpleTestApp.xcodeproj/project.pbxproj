@@ -46,6 +46,8 @@
 		B20EE362462512D474EA10CB /* carAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DCC15C064AF816E7197BDF0 /* carAnimation.json */; };
 		B370972A2A71431B009911A5 /* AutoInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37097292A71431B009911A5 /* AutoInfoResponse.swift */; };
 		B370972C2A7147C8009911A5 /* AutoPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370972B2A7147C8009911A5 /* AutoPosts.swift */; };
+		B370972F2A715FB6009911A5 /* DetailsTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370972E2A715FB6009911A5 /* DetailsTopCell.swift */; };
+		B37097312A715FC3009911A5 /* DetailsBottomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37097302A715FC3009911A5 /* DetailsBottomCell.swift */; };
 		BDB19884AD460E51EAC2059E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F122B592E389E0C16AAA64E2 /* AppCoordinator.swift */; };
 		CEF292E1DC98A5C7F4AA0899 /* DetailsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E6C515D4BC49724DE1550B /* DetailsModuleBuilder.swift */; };
 		CFDCC87A2EC2D037A35A9F4D /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080784E00802E1A93508CF2B /* FavoriteViewController.swift */; };
@@ -100,6 +102,8 @@
 		ABFB20D9F7561E1D124DC65C /* TabBarModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModuleBuilder.swift; sourceTree = "<group>"; };
 		B37097292A71431B009911A5 /* AutoInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoInfoResponse.swift; sourceTree = "<group>"; };
 		B370972B2A7147C8009911A5 /* AutoPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoPosts.swift; sourceTree = "<group>"; };
+		B370972E2A715FB6009911A5 /* DetailsTopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTopCell.swift; sourceTree = "<group>"; };
+		B37097302A715FC3009911A5 /* DetailsBottomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBottomCell.swift; sourceTree = "<group>"; };
 		BF9A50B176A1A71CECB317F1 /* SettingsDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDefaultCell.swift; sourceTree = "<group>"; };
 		C3D1D3B4C06B4B6627EAF9D9 /* simpleTestApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = simpleTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5883E401ED0ED8DA8F9A89 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 				2D7DD1DDE7043510ED178DE5 /* DetailsPresenter.swift */,
 				1ABE7F7F758B2EF6EB33AC18 /* DetailsRouter.swift */,
 				CC0AC40C3B32F1095CCBF92E /* DetailsViewController.swift */,
+				B370972D2A715FA1009911A5 /* Cells */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -312,6 +317,15 @@
 				F122B592E389E0C16AAA64E2 /* AppCoordinator.swift */,
 			);
 			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		B370972D2A715FA1009911A5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B370972E2A715FB6009911A5 /* DetailsTopCell.swift */,
+				B37097302A715FC3009911A5 /* DetailsBottomCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		BEAAACE1216E79D68F11F376 /* Extensions */ = {
@@ -558,6 +572,8 @@
 				6049E727EE66AC99F025D7B6 /* FavoriteRouter.swift in Sources */,
 				CFDCC87A2EC2D037A35A9F4D /* FavoriteViewController.swift in Sources */,
 				E8DAE962C9AF072EA4586A3F /* IntegerExtension.swift in Sources */,
+				B370972F2A715FB6009911A5 /* DetailsTopCell.swift in Sources */,
+				B37097312A715FC3009911A5 /* DetailsBottomCell.swift in Sources */,
 				6AC16D666A139B12F355C0EE /* LaunchScreenViewController.swift in Sources */,
 				B370972A2A71431B009911A5 /* AutoInfoResponse.swift in Sources */,
 				F05057BEC6C0C24E865ECD0E /* MainCollectionViewCell.swift in Sources */,

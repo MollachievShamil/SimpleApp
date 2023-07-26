@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AutoInfoResponse: Equatable, Codable {
+struct AutoInfoResponse: Hashable, Equatable, Codable {
     static func == (lhs: AutoInfoResponse, rhs: AutoInfoResponse) -> Bool {
         lhs.car.id == rhs.car.id
     }
@@ -15,6 +15,7 @@ struct AutoInfoResponse: Equatable, Codable {
     var car: Car
 }
 
-struct Car: Codable {
+struct Car: Hashable, Codable {
     var id: Int
+    var carImage: String?
 }

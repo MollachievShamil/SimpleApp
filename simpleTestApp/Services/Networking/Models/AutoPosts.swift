@@ -10,6 +10,6 @@ struct AutoPostsResponse: Codable {
     var posts: [Post]
 }
 
-struct Post: Equatable, Codable {
+struct Post: Hashable, Equatable, Codable {
     var id: Int
 }
