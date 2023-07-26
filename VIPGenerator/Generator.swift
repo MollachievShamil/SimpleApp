@@ -35,6 +35,7 @@ let interfaceRouterUrl         = moduleUrl.appendingPathComponent(prefix+"Router
 let interfacePresenterUrl      = moduleUrl.appendingPathComponent(prefix+"Presenter").appendingPathExtension("swift")
 let interfaceInteractorUrl     = moduleUrl.appendingPathComponent(prefix+"Interactor").appendingPathExtension("swift")
 let interfaceViewControllerUrl = moduleUrl.appendingPathComponent(prefix+"ViewController").appendingPathExtension("swift")
+let interfaceModuleBuilderUrl  = moduleUrl.appendingPathComponent(prefix+"ModuleBuilder").appendingPathExtension("swift")
 
 func fileComment(for module: String, type: String) -> String {
     let today    = Date()
@@ -64,26 +65,38 @@ protocol \(prefix)RouterInterface: AnyObject {
 
 }
 
-class \(prefix)Router: NSObject {
+final class \(prefix)Router: NSObject {
 
-    weak var presenter: \(prefix)PresenterInterface?
+    weak var viewController: UIViewController?
 
-    static func setupModule() -> \(prefix)ViewController {
+}
+
+extension \(prefix)Router: \(prefix)RouterInterface {
+
+}
+"""
+
+let interfaceModuleBuilder = """
+\(fileComment(for: prefix, type: "ModuleBuilder"))
+
+import Foundation
+import UIKit
+
+final class \(prefix)ModuleBuilder {
+
+    static func build() -> UIViewController {
         let vc = \(prefix)ViewController()
         let interactor = \(prefix)Interactor()
         let router = \(prefix)Router()
         let presenter = \(prefix)Presenter(interactor: interactor, router: router, view: vc)
 
         vc.presenter = presenter
-        router.presenter = presenter
+        router.viewController = vc
         interactor.presenter = presenter
         return vc
     }
 }
 
-extension \(prefix)Router: \(prefix)RouterInterface {
-
-}
 """
 
 let interfacePresenter = """
@@ -95,7 +108,7 @@ protocol \(prefix)PresenterInterface: AnyObject {
 
 }
 
-class \(prefix)Presenter {
+final class \(prefix)Presenter {
 
     unowned var view: \(prefix)ViewControllerInterface
     let router: \(prefix)RouterInterface?
@@ -127,8 +140,29 @@ protocol \(prefix)ViewControllerInterface: AnyObject {
 
 }
 
-class \(prefix)ViewController: UIViewController {
+final class \(prefix)ViewController: UIViewController {
     var presenter: \(prefix)PresenterInterface?
+
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupView()
+    }
+    
+    // MARK: - AddSubview And Constraints
+    
+    private func setupView() {
+        addSubviews()
+        addConstraints()
+    }
+ 
+    private func addSubviews() {
+        view.addSubviews()
+    }
+    
+    private func addConstraints() {
+        
+    }
 }
 
 extension \(prefix)ViewController: \(prefix)ViewControllerInterface {
@@ -146,7 +180,7 @@ protocol \(prefix)InteractorInterface: AnyObject {
 
 }
 
-class \(prefix)Interactor {
+final class \(prefix)Interactor {
     weak var presenter: \(prefix)PresenterInterface?
 }
 
@@ -165,6 +199,7 @@ do {
     try interfacePresenter.write(to: interfacePresenterUrl, atomically: true, encoding: .utf8)
     try interfaceInteractor.write(to: interfaceInteractorUrl, atomically: true, encoding: .utf8)
     try interfaceRouter.write(to: interfaceRouterUrl, atomically: true, encoding: .utf8)
+    try interfaceModuleBuilder.write(to: interfaceModuleBuilderUrl, atomically: true, encoding: .utf8)
     
 }
 catch {

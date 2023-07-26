@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "BA3D46F0-7668-4F8A-9605-96E4D47574E2"
+   uuid = "E31F0A0F-AFC4-4DC4-AE9D-40531D809D7E"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FAE44D5B-53BC-421C-9546-2FC6A6313DD2"
+            uuid = "8305A156-CD25-4CE2-97C0-78BE4FCBE7C2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "simpleTestApp/SceneDelegate.swift"
+            filePath = "simpleTestApp/Modules/TabBar/TabBarPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "scene(_:willConnectTo:options:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B2110796-2A3C-4CAA-B208-0D77B4FD0B83"
+            uuid = "B973F063-B786-4A42-BC83-0E26058B7539"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "simpleTestApp/SceneDelegate.swift"
+            filePath = "simpleTestApp/Services/AppCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "scene(_:willConnectTo:options:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "launchScreenAnimationEnded()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4E430CFE-6604-4433-B515-14400190BAC2"
+            uuid = "447DEABD-6AB5-448F-BE7C-9C38F4D14E05"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "simpleTestApp/SceneDelegate.swift"
+            filePath = "simpleTestApp/Modules/LaunchScreen/LaunchScreenViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "scene(_:willConnectTo:options:)"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "pageSetup()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "67994093-6DD6-4942-A047-14E3ACA35290"
+            uuid = "55A5FEE8-FF26-4570-932A-74FFD96002DE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "simpleTestApp/AppDelegate.swift"
+            filePath = "simpleTestApp/Modules/LaunchScreen/LaunchScreenViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "pageSetup()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

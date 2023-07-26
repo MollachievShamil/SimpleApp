@@ -44,6 +44,16 @@ class LaunchScreenViewController: UIViewController {
         startTimer()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    deinit {
+        debugPrint("launch screen deinited")
+    }
+    
     // MARK: - SetupView
     private func setupView() {
         addSubviews()
@@ -85,13 +95,9 @@ class LaunchScreenViewController: UIViewController {
         let progress = progressView.progress + 0.01
         progressView.setProgress(progress, animated: true)
       
-        if progressView.progress > 1 {
-            
+        if progressView.progress >= 1 {
+            AppCoordinator.shared.launchScreenAnimationEnded()
         }
-    }
-    
-    func showOnboarding() {
-        
     }
     
 }
