@@ -39,33 +39,271 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "447DEABD-6AB5-448F-BE7C-9C38F4D14E05"
+            uuid = "95669896-E313-46F9-B0B7-A254F6D1385E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "simpleTestApp/Modules/LaunchScreen/LaunchScreenViewController.swift"
+            filePath = "simpleTestApp/Modules/Collection/CollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "pageSetup()"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "reloadCollection()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "95669896-E313-46F9-B0B7-A254F6D1385E - df6b9ff6ac4a1018"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "simpleTestApp.CollectionInteractor.createPaginatedBottomCategory(data: Swift.Array&lt;simpleTestApp.AllAutoResponse&gt;) -&gt; ()"
+                  moduleName = "simpleTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shamilmollachiev/Desktop/simpleTestApp/simpleTestApp/Modules/Collection/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "95669896-E313-46F9-B0B7-A254F6D1385E - a026f7ae990dc6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "simpleTestApp.CollectionInteractor.appendToPaginatedBottomCategory(data: Swift.Array&lt;simpleTestApp.AllAutoResponse&gt;) -&gt; ()"
+                  moduleName = "simpleTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shamilmollachiev/Desktop/simpleTestApp/simpleTestApp/Modules/Collection/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "264">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "55A5FEE8-FF26-4570-932A-74FFD96002DE"
+            uuid = "52717BE7-86CA-4A55-A024-70DADBA2605C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "simpleTestApp/Modules/LaunchScreen/LaunchScreenViewController.swift"
+            filePath = "simpleTestApp/Modules/Collection/CollectionInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "pageSetup()"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "fetchData(page:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "52717BE7-86CA-4A55-A024-70DADBA2605C - 5442cc9caa378910"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;simpleTestApp.AllAutoResponse&gt;, Alamofire.AFError&gt;) -&gt; () in simpleTestApp.CollectionInteractor.fetchData(page: Swift.String) -&gt; ()"
+                  moduleName = "simpleTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shamilmollachiev/Desktop/simpleTestApp/simpleTestApp/Modules/Collection/CollectionInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "52717BE7-86CA-4A55-A024-70DADBA2605C - 5442cc9caa378910"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;simpleTestApp.AllAutoResponse&gt;, Alamofire.AFError&gt;) -&gt; () in simpleTestApp.CollectionInteractor.fetchData(page: Swift.String) -&gt; ()"
+                  moduleName = "simpleTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shamilmollachiev/Desktop/simpleTestApp/simpleTestApp/Modules/Collection/CollectionInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB75B9F2-1BFF-4BE2-A547-C8A57A9152F1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "simpleTestApp/Modules/Collection/CollectionInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "fetchData(page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CB75B9F2-1BFF-4BE2-A547-C8A57A9152F1 - 5442cc9caa378956"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;simpleTestApp.AllAutoResponse&gt;, Alamofire.AFError&gt;) -&gt; () in simpleTestApp.CollectionInteractor.fetchData(page: Swift.String) -&gt; ()"
+                  moduleName = "simpleTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shamilmollachiev/Desktop/simpleTestApp/simpleTestApp/Modules/Collection/CollectionInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "CB75B9F2-1BFF-4BE2-A547-C8A57A9152F1 - 5442cc9caa378956"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;simpleTestApp.AllAutoResponse&gt;, Alamofire.AFError&gt;) -&gt; () in simpleTestApp.CollectionInteractor.fetchData(page: Swift.String) -&gt; ()"
+                  moduleName = "simpleTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shamilmollachiev/Desktop/simpleTestApp/simpleTestApp/Modules/Collection/CollectionInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A0525E3D-41E8-4AE3-852E-D8995CF41DD3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "simpleTestApp/Modules/Collection/CollectionInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "infinityScrollAction()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A0525E3D-41E8-4AE3-852E-D8995CF41DD3 - 322fb550ebaf4d33"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "simpleTestApp.CollectionViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "simpleTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shamilmollachiev/Desktop/simpleTestApp/simpleTestApp/Modules/Collection/CollectionInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "408">
+               </Location>
+               <Location
+                  uuid = "A0525E3D-41E8-4AE3-852E-D8995CF41DD3 - 859385b728e65b25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "simpleTestApp.CollectionInteractor.infinityScrollAction() -&gt; ()"
+                  moduleName = "simpleTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shamilmollachiev/Desktop/simpleTestApp/simpleTestApp/Modules/Collection/CollectionInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "A0525E3D-41E8-4AE3-852E-D8995CF41DD3 - 859385b728e65b25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "simpleTestApp.CollectionInteractor.infinityScrollAction() -&gt; ()"
+                  moduleName = "simpleTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shamilmollachiev/Desktop/simpleTestApp/simpleTestApp/Modules/Collection/CollectionInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25E58F9D-972E-4EB9-8973-FA3202765B73"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "simpleTestApp/Modules/Collection/CollectionInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "infinityScrollAction()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "25E58F9D-972E-4EB9-8973-FA3202765B73 - 322fb550ebaf4d33"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "simpleTestApp.CollectionViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "simpleTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shamilmollachiev/Desktop/simpleTestApp/simpleTestApp/Modules/Collection/CollectionInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "408">
+               </Location>
+               <Location
+                  uuid = "25E58F9D-972E-4EB9-8973-FA3202765B73 - 859385b728e65ae7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "simpleTestApp.CollectionInteractor.infinityScrollAction() -&gt; ()"
+                  moduleName = "simpleTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shamilmollachiev/Desktop/simpleTestApp/simpleTestApp/Modules/Collection/CollectionInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  uuid = "25E58F9D-972E-4EB9-8973-FA3202765B73 - 859385b728e65ae7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "simpleTestApp.CollectionInteractor.infinityScrollAction() -&gt; ()"
+                  moduleName = "simpleTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shamilmollachiev/Desktop/simpleTestApp/simpleTestApp/Modules/Collection/CollectionInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "252">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

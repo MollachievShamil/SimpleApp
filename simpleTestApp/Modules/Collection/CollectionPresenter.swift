@@ -10,6 +10,10 @@ import Foundation
 
 protocol CollectionPresenterInterface: AnyObject {
     func headerLeftButtonPressed()
+    func viewDidLoad()
+    func reloadCollection()
+    func infinityScrollAction()
+    func getSectionModel() -> [MainCollectionCellModel]
 }
 
 final class CollectionPresenter {
@@ -33,4 +37,21 @@ extension CollectionPresenter: CollectionPresenterInterface {
     func headerLeftButtonPressed() {
         router?.settingsTapped()
     }
+    
+    func viewDidLoad() {
+        interactor?.viewDidLoad()
+    }
+    
+    func reloadCollection() {
+        view.reloadCollection()
+    }
+    
+    func infinityScrollAction() {
+        interactor?.infinityScrollAction()
+    }
+    
+    func getSectionModel() -> [MainCollectionCellModel] {
+        interactor?.getSectionModel() ?? []
+    }
+    
 }
